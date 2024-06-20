@@ -7,7 +7,11 @@ preciceAdapter::FF::PressureGradient::PressureGradient(
     const std::string nameP)
 : p_(
     const_cast<volScalarField*>(
-        &mesh.lookupObject<volScalarField>(nameP)))
+        &mesh.lookupObject<volScalarField>(nameP))),
+  gradp_(
+    const_cast<volVectorField*>(
+        &mesh.lookupObject<volVectorField>("gradp"))
+  )
 {
     dataType_ = scalar;
 }

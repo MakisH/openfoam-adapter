@@ -18,6 +18,9 @@ private:
     //- Pressure field
     Foam::volScalarField* p_;
 
+    //- Presure gradient field
+    Foam::volVectorField* gradp_;
+
 public:
     //- Constructor
     PressureGradient(
